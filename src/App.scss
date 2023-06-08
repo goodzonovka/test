@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    background: #ececf1;
+}
+
+.block {
+    padding: 6px 11px 6px;
+    background: #fefefe;
+    border-radius: 8px;
+    &__title {
+        font-weight: 700;
+    }
+}
+
+.gray {
+    color: #8a8a8d;
+}
+
+.app {
+    padding: 23px 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    > * {
+        width: calc(50% - 5px);
+    }
+}
+
+.card-balance {
+    min-height: 79px;
+    margin-bottom: 8px;
+    &__price {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    &__available-price {
+        font-size: 13px;
+    }
+}
+
+.payment-status {
+    display: flex;
+    flex-direction: column;
+    min-height: 161px;
+    padding-bottom: 10px;
+    &__text {
+        flex-grow: 1;
+        line-height: 17px;
+    }
+    &__check {
+        align-self: flex-end;
+        margin-top: 15px;
+        width: 59px;
+        height: 59px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eeeeef;
+        border-radius: 50%;
+        border: 1px solid #e7e7e8;
+        svg {
+            font-size: 26px;
+            transform: rotate(-7deg);
+        }
+    }
+}
+
+.daily-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 74px;
+    padding-top: 6px;
+}
+
+.latest-transactions {
+    margin-top: 22px;
+    .title {
+        margin-bottom: 4px;
+        font-size: 20px;
+        font-weight: 900;
+        padding-left: 1px;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: -11px;
+        &:not(:first-child) {
+            padding-top: 5px;
+        }
+        &:not(:last-child) {
+            padding-bottom: 4px;
+            border-bottom: 1px solid #eeeeef;
+        }
+    }
+    .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        margin-right: 13px;
+        border-radius: 4px;
+        background: orange;
+    }
+    .content {
+        position: relative;
+        width: calc(100% - 54px);
+        padding-right: 35px;
+        padding-top: 2px;
+        > * {
+            display: flex;
+        }
+        .pending, .authorized-user {
+            margin-right: 3px;
+        }
+        &__top {
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 900;
+            .price {
+                font-family: Arial, sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                padding-top: 1px;
+            }
+        }
+        &__middle {
+            justify-content: space-between;
+            align-items: center;
+            .description {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 99%;
+            }
+            .percent {
+                font-size: 11px;
+                padding: 0 4px;
+                background: #f1f1f6;
+                border-radius: 4px;
+            }
+        }
+        .chevron-right {
+            position: absolute;
+            right: 13px;
+            top: 4px;
+            font-size: 15px;
+            color: #b6b6b9;
+        }
+    }
+    .link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.transactions-details {
+    .link-back {
+        margin-left: -7px;
+        color: #004ff6;
+        font-size: 19px;
+    }
+    .info-top {
+        text-align: center;
+        margin-top: 9px;
+        .price {
+            font-size: 57px;
+            font-weight: 900;
+            line-height: 68px;
+        }
+        .date {
+            font-size: 15px;
+            margin-top: 3px;
+        }
+    }
+    .info-bottom {
+        margin-top: 34px;
+        padding: 12px 8px 9px;
+        font-size: 15.4px;
+        .item {
+            padding: 12px 7px;
+            border-bottom: 1px solid #eeeeef;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+        .title {
+            font-weight: 900;
+        }
+        .text {
+            margin-top: 1px;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 7px 0;
+            font-weight: 900;
+        }
+    }
+}
